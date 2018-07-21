@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base_head %}    <title>Baksoku|Login</title> {% endblock %}
+{% block content %}
+
+ <div class="container-fluid">
+
+     <div class="row justify-content-md-center">
+		 <div class="col-md-auto">
+             <h1>Sign in</h1>
+             <hr>
+             <br>
+
+             <form method="POST" action="">{% csrf_token %}
+                 {{ form.as_p }}
+                 <button type="submit" class="btn btn-info">Submit</button>
+                 <br/>
+                 <a href="#">Register an Account</a>
+                 <a href="{% url 'password_reset' %}">Can't Remember Password?</a>
+
+             </form>
+		 </div>
+	 </div>
+
+</div>
+
+{% endblock %}

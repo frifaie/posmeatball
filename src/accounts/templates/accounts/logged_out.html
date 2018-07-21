@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base_head %}    <title>Baksoku|Logout</title> {% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+
+        <h6><strong>Thanks for spending some quality time with the Web site today.</strong></h6>
+
+        <p><a href="{% url 'login' %}">Log in again</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
