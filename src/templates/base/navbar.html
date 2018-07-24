@@ -34,7 +34,7 @@
 						{% if request.user.is_authenticated %}
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Account
+          Hi {{ user.get_username }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item {% if request.path == account_url %}active{% endif %}" href="#">Home</a>

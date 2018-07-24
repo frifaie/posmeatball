@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base_head %}    <title>Baksoku|Password Change</title> {% endblock %}
+
+
+{% block content_title %}<h1>{{ title }}</h1>{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+
+            <div id="content-main">
+                <h1>User Registration Form</h1>
+                <hr>
+
+                <form action="{% url 'register' %}" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                        <div class="submit-row">
+                            <button type="submit" class="btn btn-info">Register</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
