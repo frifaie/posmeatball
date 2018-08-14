@@ -3,7 +3,7 @@
 {% url 'contact' as contact_url %}
 {% url 'login' as login_url %}
 {% url 'logout' as logout_url %}
-{% url 'account:register' as register_url %}
+{% url 'register' as register_url %}
 
 <div class="container-fluid">
 		<div class="col-md-12">
@@ -31,7 +31,7 @@
 						</button>
 					</form>
 					<ul class="navbar-nav ml-md-auto">
-						{% if request.user.is_authenticated %}
+		{% if request.user.is_authenticated %}
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Hi {{ user.get_username }}

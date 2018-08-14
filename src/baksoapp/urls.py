@@ -28,6 +28,7 @@ urlpatterns = [
     # path('login/', LoginView.as_view(), name='login'),
     # path('logout/', LogoutView.as_view(), name='logout'),
     path('', include('accounts.urls')),
+    path('menus/', include('menus.urls', namespace='menus')),
     path('admin/', admin.site.urls),
 ]
 

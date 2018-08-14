@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base_head %}      <title>Baksoku|Menu</title>{% endblock %}
+
+{% block content %}
+
+<h1>{{ object.name }}</h1>
+{{ object.timestamp|timesince }} ago
+{{ object.description|linebreaks }}<br/>
+{% if object.image %}
+    <img src='{{ object.image.url }}' class='img-fluid' />
+{% endif %}
+
+{% endblock content %}
