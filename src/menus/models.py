@@ -48,6 +48,9 @@ class MenuManager(models.Manager):
     def get_queryset(self):
         return MenuQuerySet(self.model, using=self._db)
 
+    def all(self):
+        return self.get_queryset().active()
+
     def meal(self):
         return self.get_queryset().active().meal()
 
